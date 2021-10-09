@@ -12,7 +12,9 @@
         android:layout_marginLeft="31dp"
         android:layout_marginTop="542dp"
         android:ems="10"
+        android:inputType="number"
         android:hint="@string/hint_editText"
+        android:minHeight="48dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
