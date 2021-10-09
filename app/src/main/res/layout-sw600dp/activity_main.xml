@@ -6,14 +6,15 @@
     android:layout_height="match_parent">
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/InputTextNumber"
         style="@style/widthSize.EditText"
         android:layout_marginStart="31dp"
         android:layout_marginLeft="31dp"
         android:layout_marginTop="542dp"
+        android:background="#5DD6F4"
         android:ems="10"
-        android:inputType="number"
         android:hint="@string/hint_editText"
+        android:inputType="number"
         android:minHeight="48dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -25,11 +26,12 @@
         android:layout_marginStart="86dp"
         android:layout_marginLeft="86dp"
         android:text="@string/calculate_btn"
-        app:layout_constraintBaseline_toBaselineOf="@+id/editTextTextPersonName"
-        app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/InputTextNumber"
+        app:layout_constraintStart_toEndOf="@+id/InputTextNumber" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/ResultTextView"
+        style="@style/widthSize.TextView1"
         android:layout_width="81dp"
         android:layout_height="0dp"
         android:layout_marginStart="115dp"
