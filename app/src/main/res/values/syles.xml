@@ -9,13 +9,15 @@
     <style name="widthSize.EditText" >
         <item name="android:textColor">#D4F1F4</item>
         <item name="android:background">#5DD6F4</item>
-        <item name="android:layout_width">170dp</item>
+        <item name="android:layout_width">180dp</item>
+        <item name="android:digits">0123456789-.</item>
+        <item name="android:singleLine">true</item>
     </style>
 
     <style name="widthSize.TextView1">
         <item name="android:textColor">#D4F1F4</item>
         <item name="android:background">#5DD6F4</item>
-        <item name="android:layout_width">152dp</item>
+        <item name="android:layout_width">151dp</item>
     </style>
 
 
