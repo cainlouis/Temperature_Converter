@@ -8,11 +8,10 @@
 
     <EditText
         android:id="@+id/InputTextNumber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/widthSize.EditText"
         android:layout_marginTop="15dp"
         android:ems="10"
-        android:hint="Enter temperature (C)"
+        android:hint="@string/hint_editText"
         android:inputType="number"
         app:layout_constraintBottom_toTopOf="@+id/CalculateButton"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,7 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="14dp"
         android:layout_marginBottom="16dp"
-        android:text="Calculate"
+        android:text="@string/calculate_btn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -48,6 +47,7 @@
 
     <TextView
         android:id="@+id/ResultTextView"
+        style="@style/widthSize.TextView1"
         android:layout_width="151dp"
         android:layout_height="59dp"
         android:layout_marginTop="24dp"
