@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">TemperatureConverter</string>
+    <string name="hint_editText">Enter temperature (C)</string>
+    <string name="calculate_btn">Calculate</string>
 </resources>
