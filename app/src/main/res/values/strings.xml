@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">TemperatureConverter</string>
+    <string name="error_message">Enter a number between -50 and 50</string>
 </resources>
