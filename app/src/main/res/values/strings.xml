@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">TemperatureConverter</string>
-    <string name="hint_editText">Enter temperature (C)</string>
+    <string name="hint_editText">Enter temperature\n (C)</string>
     <string name="calculate_btn">Calculate</string>
     <string name="error_message">Enter a number between -50 and 50</string>
+    <string name="error_dot">This is not number</string>
 </resources>

@@ -22,18 +22,27 @@ class MainActivity : AppCompatActivity() {
         result = findViewById(R.id.ResultTextView)
 
         button.setOnClickListener {
-            var input = userInput.text.toString().toDouble()
-            val minTemp = -50
-            val maxTemp = 50
-            if ((input > maxTemp) || (input < minTemp)) {
-                displayToast()
+            try{
+                var input = userInput.text.toString().toDouble()
+                val minTemp = -50
+                val maxTemp = 50
+                if ((input > maxTemp) || (input < minTemp)) {
+
+                    displayToast(R.string.error_message)
+                }
+                else {
+                    var fahrenheit = calculateTemperature(input)
+                    var roundFahrenheit = String.format("%.1f", fahrenheit)
+                    result.text = roundFahrenheit
+                    displayImage(input)
+                }
             }
-            else {
-                var fahrenheit = calculateTemperature(input)
-                var roundFahrenheit = String.format("%.1f", fahrenheit)
-                result.text = roundFahrenheit
-                displayImage(input)
+            catch (e : NumberFormatException){
+
+                displayToast(R.string.error_dot)
             }
+
+
         }
 
     }
@@ -44,8 +53,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     //Display the toast message
-    private fun displayToast() {
-        val errorMessage = Toast.makeText(this, R.string.error_message, Toast.LENGTH_SHORT)
+    private fun displayToast(msg : Int) {
+        val errorMessage = Toast.makeText(this, msg, Toast.LENGTH_SHORT)
         errorMessage.show()
     }
 

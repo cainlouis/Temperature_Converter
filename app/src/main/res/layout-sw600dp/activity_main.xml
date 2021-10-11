@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/InputTextNumber"
+        style="@style/widthSize.EditText"
+        android:layout_marginBottom="100dp"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:textSize="25dp"
+        android:ems="10"
+        android:hint="@string/hint_editText"
+        android:inputType="number"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/CalculateButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/CalculateButton"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="100dp"
+        android:text="@string/calculate_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/InputTextNumber" />
+
+    <TextView
+        android:id="@+id/ResultTextView"
+        style="@style/widthSize.TextView1"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/InputTextNumber"
+        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="205dp"
+        android:layout_height="201dp"
+        android:clickable="false"
+        app:layout_constraintBottom_toTopOf="@+id/CalculateButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ResultTextView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/default_img" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
