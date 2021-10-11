@@ -3,6 +3,8 @@ package com.example.temperatureconverter
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
+import java.math.BigDecimal
+import java.math.RoundingMode
 
 class MainActivity : AppCompatActivity() {
     private lateinit var button: Button
@@ -20,15 +22,16 @@ class MainActivity : AppCompatActivity() {
         result = findViewById(R.id.ResultTextView)
 
         button.setOnClickListener {
-            val input = userInput.text.toString().toInt()
+            var input = userInput.text.toString().toDouble()
             val minTemp = -50
             val maxTemp = 50
             if ((input > maxTemp) || (input < minTemp)) {
                 displayToast()
             }
             else {
-                val fahrenheit = calculateTemperature(input)
-                result.text = fahrenheit.toString()
+                var fahrenheit = calculateTemperature(input)
+                var roundFahrenheit = String.format("%.1f", fahrenheit)
+                result.text = roundFahrenheit
                 displayImage(input)
             }
         }
@@ -36,7 +39,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     //return the result of the conversion from C to F
-    private fun calculateTemperature(temp: Int): Double {
+    private fun calculateTemperature(temp: Double): Double {
         return temp * 1.8 + 32
     }
 
@@ -47,12 +50,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     //Display the right image according to the input
-    private fun displayImage(input: Int) {
+    private fun displayImage(input: Double) {
         when {
             input < 19 -> {
                 img.setImageResource(R.drawable.cold_weather)
             }
-            input in 20..23 -> {
+            input in 19.0..24.0 -> {
                 img.setImageResource(R.drawable.good_weather)
             }
             else -> {
